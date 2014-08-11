@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KrH-X2-4QC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="GZA-ZS-shX">
+            <objects>
+                <navigationController id="KrH-X2-4QC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vLy-jN-tkO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lPE-4w-uTQ" kind="relationship" relationship="rootViewController" id="4Ma-lS-xo7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqN-rm-FKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="618"/>
+        </scene>
+        <!--Outer Nav Controller-->
+        <scene sceneID="YQk-Xf-Crr">
+            <objects>
+                <viewController id="lPE-4w-uTQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Qt-he-pAe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Okd-qS-P0d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MHo-Zf-vqp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8uM-PP-WiF" customClass="RoundRectMaskingContainerView">
+                                <rect key="frame" x="76" y="75" width="450" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8uM-PP-WiF" secondAttribute="height" multiplier="1:1" id="jdk-9Y-XUh"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="0ky-6P-HYW" kind="embed" identifier="EmbeddingSegue" id="aXL-Bu-Pbb"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="8uM-PP-WiF" secondAttribute="centerX" id="4GU-pE-pWO"/>
+                            <constraint firstItem="8uM-PP-WiF" firstAttribute="width" secondItem="MHo-Zf-vqp" secondAttribute="width" multiplier="3:4" id="EI2-tf-gow"/>
+                            <constraint firstAttribute="centerY" secondItem="8uM-PP-WiF" secondAttribute="centerY" id="U4U-lS-LIX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Outer Nav Controller" id="40m-HT-GdP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVD-rW-QPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="615"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EEJ-zx-Dh8">
+            <objects>
+                <navigationController id="0ky-6P-HYW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LRH-Xs-irv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d5V-YL-Oy9" kind="relationship" relationship="rootViewController" id="7fb-Rn-vIu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6X-tq-ItT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="1398"/>
+        </scene>
+        <!--Inner Nav Controller-->
+        <scene sceneID="Qbo-Gi-zaG">
+            <objects>
+                <viewController id="d5V-YL-Oy9" sceneMemberID="viewController">
+                    <textView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" usesAttributedText="YES" id="zKF-Bb-IN1">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="450"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <attributedString key="attributedText">
+                            <fragment>
+                                <string key="content">Notice that the background for the outer nav bar has completely disappeared.
+
+Scroll the text in this view controller underneath the inner nav bar and notice that the visual effect that's supposed to blur it is broken.
+
+
+
+Notice that the background for the outer nav bar has completely disappeared.
+
+Scroll the text in this view controller underneath the inner nav bar and notice that the visual effect that's supposed to blur it is broken.
+
+
+
+Notice that the background for the outer nav bar has completely disappeared.
+
+Scroll the text in this view controller underneath the inner nav bar and notice that the visual effect that's supposed to blur it is broken.
+
+
+
+Notice that the background for the outer nav bar has completely disappeared.
+
+Scroll the text in this view controller underneath the inner nav bar and notice that the visual effect that's supposed to blur it is broken.</string>
+                                <attributes>
+                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <navigationItem key="navigationItem" title="Inner Nav Controller" id="sWC-JQ-AHQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LhL-MN-BJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="1398"/>
+        </scene>
+    </scenes>
+</document>
